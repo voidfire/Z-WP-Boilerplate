@@ -7,6 +7,17 @@ function z_wp_theme_support() {
 
 add_action('after_setup_theme', 'z_wp_theme_support');
 
+function z_wp_menus() {
+    $locations = array(
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'z_wp_menus');
+
 function z_wp_register_styles() {
 
     $version = wp_get_theme()->get( 'Version' );
