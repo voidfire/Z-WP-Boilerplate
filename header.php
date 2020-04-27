@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://github.com/voidfire">    
-    <link rel="shortcut icon" href="images/logo.png"> 
+    <link rel="shortcut icon" href="<?php echo $logo[0] ?>"> 
         
     <?php
         wp_head();
@@ -26,7 +26,15 @@
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo" >			
+                <?php
+                    if(function_exists('the_custom_logo')) {
+
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id);
+                        
+                    } 
+                ?>
+				<img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" >			
                 
                 <?php
                     wp_nav_menu(
