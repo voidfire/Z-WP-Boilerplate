@@ -47,5 +47,21 @@ function z_wp_register_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'z_wp_register_scripts');
 
+function z_wp_widget_areas(){
 
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '',
+            'after_widget' => '',
+            'name' => 'Sidebar area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+        )
+    );
+
+}
+
+add_action('widgets_init', 'z_wp_widget_areas');
 ?>
