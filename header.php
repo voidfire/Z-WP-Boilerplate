@@ -17,7 +17,9 @@
 <body>
     
     <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
+	    <a class="site-title pt-lg-4 mb-0" href="index.html">
+            <?php echo get_bloginfo('name'); ?>
+        </a>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -34,7 +36,7 @@
                         
                     } 
                 ?>
-				<img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" >			
+				<img class="mb-3 mx-auto logo" src="<?php echo $logo[0]; ?>" alt="logo" >			
                 
                 <?php
                     wp_nav_menu(
