@@ -16,6 +16,9 @@ get_header();
         }
     ?>
 
+    <?php
+        the_posts_pagination();
+    ?>
 
     </article>
 

@@ -276,7 +276,7 @@ h6 {
     display: none
 }
 
-.blog-nav a {
+.nav-links a {
     background: var(--primary);
     color: #fff;
     font-size: 1rem;
@@ -285,22 +285,22 @@ h6 {
     position: relative
 }
 
-.blog-nav a:hover {
+.nav-links a:hover {
     background: var(--secondary);
 }
 
-.blog-nav a-prev {
+.nav-links .nav-link-prev {
     border-right: 1px solid var(--secondary);
 }
 
-.blog-nav .arrow-prev {
+.nav-links .arrow-prev {
     position: absolute;
     left: 1rem;
     top: 1.25rem;
     color: #fff
 }
 
-.blog-nav .arrow-next {
+.nav-links .arrow-next {
     position: absolute;
     right: 1rem;
     top: 1.25rem;
